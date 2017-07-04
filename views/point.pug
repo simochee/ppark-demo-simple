@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 ポイント情報
+
+    table.table
+        tbody
+            th 残りポイント
+            td 103ポイント
+
+    a.btn.btn-default.btn-block(href="/") ホームに戻る
+    
+    h2 ポイント利用履歴
+    
+    table.table.table-striped
+        thead
+            te
+                th 日時
+                th 内容
+                th 利用pt
+        tbody
+            tr
+                td 06/20 19:30
+                td 駐車(12min)
+                td 12
+            tr
+                td 06/20 19:30
+                td 駐車(12min)
+                td 12
+            tr
+                td 06/20 19:30
+                td 駐車(12min)
+                td 12
+            tr
+                td 06/20 19:30
+                td 駐車(12min)
+                td 12
+                
+    a.btn.btn-default.btn-block(href="/") ホームに戻る

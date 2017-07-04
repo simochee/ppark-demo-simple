@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 入庫完了
+    p 以下の駐車マスに入庫しました
+
+    table.table.table-responsive.table-striped
+        tbody
+            tr
+                th 駐車マス
+                td 高専０１
+            tr
+                th 入庫時刻
+                td= new Date()
+            tr
+                th ポイント消費
+                td １ポイント / 分
+            tr
+                th ポイント備考
+                td 上限５００ポイント
+    
+    a.btn.btn-success.btn-lg.btn-block(href="/") ホームに戻る

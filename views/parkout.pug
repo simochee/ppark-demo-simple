@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 出庫する
+
+    p 下記の駐車マスより出庫します
+
+    table.table.table-striped
+        tbody
+            tr
+                th 駐車マスＩＤ
+                td 高専０１
+            tr
+                th 入庫時刻
+                td= new Date
+            tr
+                th 経過時間
+                td 12分
+    
+    form(action="" method="post")
+        input(type="hidden" value="1")
+        button.btn.btn-primary.btn-lg.btn-block(type="submit") 出庫する

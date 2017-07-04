@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    include components/navbar
+
+    .container
+        .jumbotron
+            h1 ログイン
+            form(action="" method="post")
+                .form-group
+                    label(for="inputId") ID
+                    input.form-control.input-lg#inputId(type="text" name="id" value=inputId placeholder="ユーザーＩＤ")
+                .form-group
+                    label(for="inputPassword") パスワード
+                    input.form-control.input-lg#inputPassword(type="password" name="password" placeholder="半角英数字のパスワード")
+                p.help-block ※ログイン情報は３０日間保持されます
+                input(type="hidden" name="redirect" value=redirect)
+                button.btn.btn-primary.btn-lg.btn-block(type="submit") ログイン
+        a.btn.btn-link.btn-block(href="/joinus") アカウントをお持ちではありませんか？

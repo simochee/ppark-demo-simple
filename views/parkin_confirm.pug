@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 入庫マス確認
+
+    img(style="width: 100%" src=`https://maps.googleapis.com/maps/api/staticmap?center=${parking.lat},${parking.lng}&zoom=20&size=400x200&scale=2&maptype=hybrid&markers=size:large%7Ccolor:blue%7Clabel:P%7C${parking.lat},${parking.lng}&key=AIzaSyBsC4yyzgmEmzHncufnINm-nt1JgEy6rdQ`)
+
+    h4 入庫マス
+
+    table.table.table-striped
+        tr
+            th 駐車マス
+            td= parking.name
+        tr
+            th 備考
+            td= parking.description
+    
+    form.form-group(action="" method="post")
+        button.btn.btn-primary.btn-lg.btn-block(type="submit") ここに入庫する
+    
+    .form-group
+        a.btn.btn-text.btn-block(href="/parkin") 駐車マスを選び直す

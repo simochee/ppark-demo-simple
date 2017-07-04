@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 プチＰ学内実験
+
+    if id
+      p ご協力いただき、誠にありがとうございます。
+      
+      .list-group
+        a.list-group-item(href="/parkin")
+          h4.list-group-item-heading 入庫する
+          p.list-group-item-text 学内の駐車場へ入庫します
+        a.list-group-item(href="/point")
+          h4.list-group-item-heading ポイント情報
+          p.list-group-item-text 残りポイントや利用履歴を表示します
+        a.list-group-item(href="/help")
+          h4.list-group-item-heading ヘルプ
+          p.list-group-item-text 利用方法などを表示します
+        a.list-group-item(href="/logs")
+          h4.list-group-item-heading ログデータ
+          p.list-group-item-text 利用情報のログを表示します
+    else
+      .jumbotron
+        p ログインしてください
+
+    a.btn.btn-link.btn-block(href="/viewer") システムログを閲覧する

@@ -1,0 +1,24 @@
+nav.navbar.navbar-default
+    .container
+        .navbar-header
+            button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbarContent")
+                span.sr-only Toggle naivgation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="/") プチＰ学内実験
+            
+        .collapse.navbar-collapse#navbarContent
+            if id
+                ul.nav.navbar-nav
+                    li: a(href="/") ホーム
+                    li: a(href="/parkin") 入庫
+                    li: a(href="/help") ヘルプ
+                .navbar-right
+                    p.navbar-text ようこそ #{id} さん
+                    .btn-group.navbar-btn(role="group")
+                        a.btn.btn-danger(href="/logout") ログアウト
+            else
+                .btn-group.navbar-btn.navbar-right(role="group")
+                    a.btn.btn-default(href="/joinus") 新規登録
+                    a.btn.btn-info(href="/login") ログイン

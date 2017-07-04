@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 出庫完了
+    p ご利用ありがとうございました。
+
+    table.table 
+        tbody
+            tr
+                th 消費ポイント
+                td 12ポイント
+            tr
+                th 残ポイント
+                td 103ポイント
+
+    a.btn.btn-success.btn-lg.btn-block(href="/") ホームに戻る

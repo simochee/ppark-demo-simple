@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  include components/navbar
+
+  .container
+    h1 入庫する
+    p 学内の駐車場へ入庫します
+
+    h2 駐車マスを選ぶ
+
+    .list-group
+        each parking in parkings
+            a.list-group-item(href=`/parkin/${parking.id}`)
+                h4.list-group-item-heading= parking.name
+                p.list-group-item-text= parking.description
